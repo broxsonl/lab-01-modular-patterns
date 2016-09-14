@@ -2,11 +2,9 @@
 
 const gulp = require('gulp');
 const eslint = require('gulp-eslint');
+const mocha = require('gulp-mocha');
 
-gulp.task('hello', function() {
-  console.log('hello world');
-});
-
+//lint task
 gulp.task('lint', function() {
   return gulp.src(['**/*.js', '!node_modules/**'])
   .pipe(eslint())
@@ -14,6 +12,16 @@ gulp.task('lint', function() {
   .pipe(eslint.failAfterError());
 });
 
-gulp.task('watch:hello', function() {
-  gulp.watch('**/*.js', ['hello']);
+//test task
+gulp.task('test', function() {
+  gulp.src('./test/*-test.js', {read:false})
+  .pipe(mocha({reporter:'nyan'}));
+});
+
+//default task
+gulp.task('default', ['test']);
+
+//dev task
+gulp.task('devtask', function() {
+  gulp.watch(['**/*.js', '!node_modules/**'], ['lint', 'test']);
 });

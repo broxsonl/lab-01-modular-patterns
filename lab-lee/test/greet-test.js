@@ -9,3 +9,13 @@ describe('testing #greet()', function() {
     assert.ok(result === 'hello lee', 'was not hello lee');
   });
 });
+
+describe('testing #greet()', function() {
+  it ('should not be an empty string', function() {
+    let result = greet.greet('lee');
+    // assert.equal(result, 'hello lee', 'The string was empty');
+    if (result === 'hello ') {
+      assert.ifError('empty string');
+    }
+  });
+});
