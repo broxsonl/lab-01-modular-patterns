@@ -15,13 +15,13 @@ gulp.task('lint', function() {
 //test task
 gulp.task('test', function() {
   gulp.src('./test/*-test.js', {read:false})
-  .pipe(mocha({reporter:'nyan'}));
+  .pipe(mocha({reporter:'landing'}));
 });
 
 //default task
 gulp.task('default', ['test']);
 
 //dev task
-gulp.task('devtask', function() {
+gulp.task('dev', function() {
   gulp.watch(['**/*.js', '!node_modules/**'], ['lint', 'test']);
 });
