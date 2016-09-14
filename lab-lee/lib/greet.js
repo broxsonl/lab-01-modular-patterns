@@ -8,5 +8,5 @@ exports.greet = function(name) {
   if(typeof(name) !== 'string') {
     throw new Error('Must be a string');
   }
-  return 'hello ' + name;
+  return `hello ${name}`;
 };
