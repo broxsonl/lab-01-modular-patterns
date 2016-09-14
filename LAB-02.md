@@ -13,13 +13,13 @@
 * add your own gitignore
 * include a package.json
 * include the class eslint
-* add a glup file
+* add a gulp file
 
 ### Gulp Tasks
 * make a lint task for running eslint
 * make a test task for running mocha
-* make a dev task that waches your files and runs the lint and test taks
-* make a defalut task that runs your favorite task
+* make a dev task that watches your files and runs the lint and test tasks
+* make a default task that runs your favorite task
 
 ## Rubric:
 * Correct Submission: 2pts
