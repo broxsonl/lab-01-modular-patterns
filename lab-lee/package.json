@@ -1,11 +1,19 @@
 {
   "name": "lab-lee",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "broxsonl@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^3.5.0",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^3.0.1",
+    "gulp-mocha": "^3.0.1",
+    "karma-nyan-reporter": "^0.2.4",
+    "mocha": "^3.0.2"
+  }
 }
